@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObstacleMovement : MonoBehaviour
 {
     public float MoveSpeed = 4f;
-    // Start is called before the first frame update
+ 
     void Start()
     {
         
@@ -15,5 +15,6 @@ public class ObstacleMovement : MonoBehaviour
     void Update()
     {
         transform.position += new Vector3(MoveSpeed, 0, 0) * Time.deltaTime;
+
     }
 }

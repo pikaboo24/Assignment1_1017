@@ -5,6 +5,9 @@ using UnityEngine;
 public class ObstacleMovement : MonoBehaviour
 {
     public float MoveSpeed = 4f;
+    public float range = 20;
+    public float distanceTravelled = 0;
+
  
     void Start()
     {
@@ -14,7 +17,16 @@ public class ObstacleMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(MoveSpeed, 0, 0) * Time.deltaTime;
+        Vector3 forwardvector = transform.right;
+
+        transform.position = transform.position + forwardvector * Time.deltaTime * MoveSpeed;
+        distanceTravelled += MoveSpeed * Time.deltaTime;
+        
+        if(distanceTravelled > range)
+
+        {
+            Destroy(gameObject);
+        }
 
     }
 }

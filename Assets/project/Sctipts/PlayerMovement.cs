@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private float MoveSpeed = 7f;
     public Vector2 MinBounds;
     public Vector2 MaxBounds;
+    [Header("Animation")]
+    public Animator animator;
     void Start()
     {
         
@@ -24,6 +26,32 @@ public class PlayerMovement : MonoBehaviour
         newPosition.x = Mathf.Clamp(newPosition.x, MinBounds.x, MaxBounds.x);
         newPosition.y = Mathf.Clamp(newPosition.y, MinBounds.y, MaxBounds.y);
         transform.position = newPosition;
+        if (HorizontalInput > 0)
+        {
+            animator.Play("Forward");
+        } else if (HorizontalInput < 0)
+        {
+            animator.Play("Backward");
+        }
+        else
+        { 
+
+            if (VerticalInput > 0)
+            {
+                animator.Play("Strafe_left");
+            }
+            else if (VerticalInput < 0)
+            {
+                animator.Play("Strafe_right");
+
+
+            }
+            else
+            {
+                animator.Play("state-Idle");
+            }
+        }
     }
+
     
 }

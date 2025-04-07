@@ -30,6 +30,7 @@ public class PlayerShoot : MonoBehaviour
             Destroy(collision.gameObject);
 
         }
+        
     }
     void Start()
     {
@@ -135,6 +136,7 @@ public class PlayerShoot : MonoBehaviour
 
 
     }
+    
 }
 
 

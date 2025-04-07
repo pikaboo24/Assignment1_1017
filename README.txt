@@ -17,3 +17,6 @@ acknowledgements:
 
 for the script : https://discussions.unity.com/t/diagonal-movement-is-quicker/802271/2
 Adrian helped should be the second comment
+https://www.youtube.com/watch?v=G4LQbjJPs7I
+https://www.youtube.com/watch?v=2PfJZtnfc_Q
+https://www.youtube.com/watch?v=8TqY6p-PRcs

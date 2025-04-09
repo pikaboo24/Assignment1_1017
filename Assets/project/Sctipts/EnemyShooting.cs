@@ -8,6 +8,11 @@ public class EnemyShooting : MonoBehaviour
     public Transform bulletPos;
 
     private float timer;
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +31,7 @@ public class EnemyShooting : MonoBehaviour
     }
     void shoot()
     {
+        audioManager.PlaySFX(audioManager.enemyShoot);
         Instantiate(bullet, bulletPos.position, Quaternion.identity);   
     }
 }

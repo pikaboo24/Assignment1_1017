@@ -11,9 +11,13 @@ public class PlayerShoot : MonoBehaviour
     public float TimeReload = 0;
     public bool Shooting;
     public ShootingMode shootingMode = ShootingMode.Default;
-    
-    
-    
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
+
     public enum ShootingMode
     {
         Default = 0, 
@@ -75,6 +79,7 @@ public class PlayerShoot : MonoBehaviour
         FireRate = 3;
         if (Shooting && TimeReload <= 0)
         {
+            audioManager.PlaySFX(audioManager.playerShoot);
             Instantiate(ProjectilePrefab, transform.position, transform.rotation);
             float SecondsperShot = 1 / FireRate;
             TimeReload = SecondsperShot;
@@ -93,6 +98,7 @@ public class PlayerShoot : MonoBehaviour
         FireRate = 9;
         if (Shooting && TimeReload <= 0)
         {
+            audioManager.PlaySFX(audioManager.playerShoot);
             Instantiate(ProjectilePrefab, transform.position, transform.rotation);
             float SecondsperShot = 1 / FireRate;
             TimeReload = SecondsperShot;
@@ -114,6 +120,7 @@ public class PlayerShoot : MonoBehaviour
         {
             FireRate = 3;
             Vector3 eulerRotation = transform.rotation.eulerAngles;
+            audioManager.PlaySFX(audioManager.playerShoot);
 
             Instantiate(ProjectilePrefab, transform.position, 
                 Quaternion.Euler(eulerRotation.x, eulerRotation.y , eulerRotation.z + 7));

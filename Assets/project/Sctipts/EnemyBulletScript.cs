@@ -7,6 +7,11 @@ public class EnemyBulletScript : MonoBehaviour
     private GameObject player;
     private Rigidbody2D rb;
     public float force;
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +34,10 @@ public class EnemyBulletScript : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             Debug.Log("You have been shot");
+            audioManager.PlaySFX(audioManager.playerDeath);
+
             Destroy(gameObject);
+
         }
        
     }

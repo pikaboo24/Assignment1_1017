@@ -62,10 +62,10 @@ public class PlayerMovement : MonoBehaviour
     {
 
 
-        if (collision.CompareTag("Enemy"))
+        if (collision.tag == "Enemy" || collision.tag == "Obs")
         {
             audioManager.PlaySFX(audioManager.boom2);
-            audioManager.PlaySFX(audioManager.enemyDeath);
+            audioManager.PlaySFX(audioManager.playerDeath);
 
             Destroy(collision.gameObject);
             Destroy(gameObject);

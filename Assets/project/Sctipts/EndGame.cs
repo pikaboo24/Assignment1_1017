@@ -20,6 +20,7 @@ public class EndGame : MonoBehaviour
     }
     public void OpenEndScreen()
     {
+        ScoreKeep.instance.StopScore();
         Time.timeScale = 0;
         tryAgainButton.SetActive(true);
     }

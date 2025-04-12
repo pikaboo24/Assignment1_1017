@@ -8,6 +8,7 @@ public class ScoreKeep : MonoBehaviour
     public static ScoreKeep instance;
     public TextMeshProUGUI scoreText;
     private int score;
+    private bool isGameOver = false;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -30,7 +31,7 @@ public class ScoreKeep : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.frameCount % 60 == 0)
+        if (!isGameOver && Time.frameCount % 60 == 0)
         {
             AddScore(1);
         }
@@ -43,5 +44,9 @@ public class ScoreKeep : MonoBehaviour
     void UpdatescoreText()
     {
         scoreText.text = "Score: " + score.ToString();
+    }
+    public void StopScore()
+    {
+        isGameOver = true;
     }
 }

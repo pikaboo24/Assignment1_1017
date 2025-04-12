@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource SFXSource;
 
     [Header("------- Audio Clip -------")]
+    public AudioClip boom2;
     public AudioClip background;
     public AudioClip playerDeath;
     public AudioClip astrodDeath;

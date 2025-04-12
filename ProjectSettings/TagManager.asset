@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Audio
+  - Bullet
+  - Bullet_P
+  - Bullet_E
   layers:
   - Default
   - TransparentFX

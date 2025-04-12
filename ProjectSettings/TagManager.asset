@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Bullet_P
   - Bullet_E
+  - Obs
   layers:
   - Default
   - TransparentFX

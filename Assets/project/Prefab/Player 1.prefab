@@ -128,6 +128,7 @@ MonoBehaviour:
   MinBounds: {x: -8.3, y: -4.5}
   MaxBounds: {x: 8.3, y: 4.5}
   animator: {fileID: 7842736370909821884}
+  explosionPrefab: {fileID: 0}
 --- !u!114 &5495729380591748370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,8 +365,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0b96c0bce68899147b31dc889f3aa266, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 9294be19268cbdb42917826bad6af044, type: 3}
+  m_Color: {r: 0.9622642, g: 0.1319649, b: 0.12406544, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

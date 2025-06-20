@@ -60,6 +60,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.46f1-x86_64\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\project\Sctipts\MainController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets\project\Sctipts\PlayerMovement.cs" />
     <Compile Include="Assets\project\Sctipts\PlayerShoot.cs" />
     <Compile Include="Assets\project\Sctipts\ScrollingBG.cs" />
+    <Compile Include="Assets\project\Sctipts\UIManager.cs" />
     <Compile Include="Assets\ObsMove.cs" />
     <Compile Include="Assets\ObsCollide.cs" />
     <Compile Include="Assets\PowerUp.cs" />
@@ -119,6 +121,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\_MyAssets\_Scripts\SoundManager.cs" />
+    <Compile Include="Assets\project\Sctipts\SceneLoader.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
   </ItemGroup>
   <ItemGroup>

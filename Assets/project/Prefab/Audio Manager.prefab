@@ -304,6 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 7840124139590977827}
   SFXSource: {fileID: 5341998730336377734}
+  boom2: {fileID: 0}
   background: {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
   playerDeath: {fileID: 8300000, guid: 5e1a9f876d3dafd47bc6b3dde25135fa, type: 3}
   astrodDeath: {fileID: 8300000, guid: 06ada5590eba8d6489b36c6f3c54ff78, type: 3}

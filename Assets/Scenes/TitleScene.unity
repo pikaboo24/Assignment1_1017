@@ -155,7 +155,7 @@ RectTransform:
   m_Father: {fileID: 357620297}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -408,7 +408,7 @@ RectTransform:
   m_Father: {fileID: 369267116}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -534,12 +534,12 @@ GameObject:
   - component: {fileID: 461633625}
   - component: {fileID: 461633624}
   m_Layer: 5
-  m_Name: PausePanel
+  m_Name: pausePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &461633624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,13 +920,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1707810262}
   m_HandleRect: {fileID: 1681913040}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1414907855}
+        m_TargetAssemblyTypeName: VoulumeSettings, Assembly-CSharp
+        m_MethodName: SetSFXVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1244095801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,6 +1076,17 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1414907855 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4697217786275038324, guid: f0dbcaa5fa8790f4681cab68480d3948, type: 3}
+  m_PrefabInstance: {fileID: 8125525168887281884}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a3cddc793456c74cb98daced8887820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1636696187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,7 +1192,7 @@ RectTransform:
   m_Father: {fileID: 1660169718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1428,13 +1451,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 261017003}
   m_HandleRect: {fileID: 72126307}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.6
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1414907855}
+        m_TargetAssemblyTypeName: VoulumeSettings, Assembly-CSharp
+        m_MethodName: SetMusicVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1707810261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,7 +1503,7 @@ RectTransform:
   m_Father: {fileID: 1636696188}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1819,6 +1854,14 @@ PrefabInstance:
       propertyPath: pausePanel
       value: 
       objectReference: {fileID: 461633623}
+    - target: {fileID: 4697217786275038324, guid: f0dbcaa5fa8790f4681cab68480d3948, type: 3}
+      propertyPath: SFXSlider
+      value: 
+      objectReference: {fileID: 970197050}
+    - target: {fileID: 4697217786275038324, guid: f0dbcaa5fa8790f4681cab68480d3948, type: 3}
+      propertyPath: musicSlider
+      value: 
+      objectReference: {fileID: 1707355536}
     - target: {fileID: 7436918520061016735, guid: f0dbcaa5fa8790f4681cab68480d3948, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.6306297
@@ -1868,8 +1911,8 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 8125525168887281884}
   - {fileID: 1244095804}
   - {fileID: 852774968}
   - {fileID: 2078326024}
   - {fileID: 240472618}
-  - {fileID: 8125525168887281884}

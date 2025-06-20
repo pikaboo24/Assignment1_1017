@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Rendering;
+
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -27,7 +27,9 @@ public class VoulumeSettings : MonoBehaviour
     {
         float volume = musicSlider.value;
         myMixer.SetFloat("music", Mathf.Log10(volume)*20);
-        PlayerPrefs.SetFloat("musicVolume", volume);    
+        PlayerPrefs.SetFloat("musicVolume", volume);
+        Debug.Log("Music volume from PlayerPrefs: " + PlayerPrefs.GetFloat("musicVolume"));
+
     }
     public void SetSFXVolume()
     {
@@ -45,6 +47,7 @@ public class VoulumeSettings : MonoBehaviour
         SetMusicVolume();
         SetSFXVolume();
     }
+
 }
 
 

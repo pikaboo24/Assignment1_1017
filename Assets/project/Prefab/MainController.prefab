@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 1223459338118267894}
   - component: {fileID: 5235877420755215347}
   - component: {fileID: 3704940874368556720}
+  - component: {fileID: 4697217786275038324}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Audio
@@ -95,7 +96,7 @@ MonoBehaviour:
   musicSource: {fileID: 5235877420755215347}
   SFXSource: {fileID: 3704940874368556720}
   boom2: {fileID: 0}
-  background: {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
+  background: {fileID: 0}
   playerDeath: {fileID: 0}
   astrodDeath: {fileID: 0}
   enemyDeath: {fileID: 0}
@@ -112,12 +113,12 @@ AudioSource:
   m_GameObject: {fileID: 8422207472016681811}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3849769036695726660, guid: 2885eea2c687de04d8e7f8ba8e0c9313, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -208,7 +209,7 @@ AudioSource:
   m_GameObject: {fileID: 8422207472016681811}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2694974945543406680, guid: 2885eea2c687de04d8e7f8ba8e0c9313, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -295,6 +296,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4697217786275038324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8422207472016681811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a3cddc793456c74cb98daced8887820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMixer: {fileID: 24100000, guid: 2885eea2c687de04d8e7f8ba8e0c9313, type: 2}
+  musicSlider: {fileID: 0}
+  SFXSlider: {fileID: 0}
 --- !u!1 &9091523678474794320
 GameObject:
   m_ObjectHideFlags: 0

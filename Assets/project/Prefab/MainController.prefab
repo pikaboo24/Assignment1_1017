@@ -95,15 +95,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 5235877420755215347}
   SFXSource: {fileID: 3704940874368556720}
-  boom2: {fileID: 0}
-  background: {fileID: 0}
-  playerDeath: {fileID: 0}
-  astrodDeath: {fileID: 0}
-  enemyDeath: {fileID: 0}
-  playerShoot: {fileID: 0}
-  enemyShoot: {fileID: 0}
-  enemyShoot2: {fileID: 0}
-  boom: {fileID: 0}
+  boom2: {fileID: 8300000, guid: 3a71a8b0e6c4c0842980e21cd658ad9a, type: 3}
+  background: {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
+  playerDeath: {fileID: 8300000, guid: 5e1a9f876d3dafd47bc6b3dde25135fa, type: 3}
+  astrodDeath: {fileID: 8300000, guid: 06ada5590eba8d6489b36c6f3c54ff78, type: 3}
+  enemyDeath: {fileID: 8300000, guid: 06ada5590eba8d6489b36c6f3c54ff78, type: 3}
+  playerShoot: {fileID: 8300000, guid: d31bacfe6a0935b449f374fed9bb6567, type: 3}
+  enemyShoot: {fileID: 8300000, guid: d31bacfe6a0935b449f374fed9bb6567, type: 3}
+  enemyShoot2: {fileID: 8300000, guid: ab68edafeed0fed4a90acd2fccd1ed22, type: 3}
+  boom: {fileID: 8300000, guid: ccd4401f876e1b44a95a5574e3e71c27, type: 3}
 --- !u!82 &5235877420755215347
 AudioSource:
   m_ObjectHideFlags: 0
@@ -114,7 +114,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -3849769036695726660, guid: 2885eea2c687de04d8e7f8ba8e0c9313, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

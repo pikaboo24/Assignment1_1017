@@ -5,8 +5,8 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [Header ( "------- Audio Source -------")]
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource SFXSource;
+    [SerializeField] private   AudioSource musicSource;
+    [SerializeField] private  AudioSource SFXSource;
 
     [Header("------- Audio Clip -------")]
     public AudioClip boom2;
@@ -20,16 +20,29 @@ public class AudioManager : MonoBehaviour
     public AudioClip boom;
     private void Start()
     {
-        musicSource.clip = background;
-        musicSource.Play();
+        if (musicSource != null && background != null)
+             {
+                 musicSource.clip = background;
+                 musicSource.loop = true;
+                 musicSource.Play();
+             } 
     }
     public void PlaySFX(AudioClip clip)
     {
-        SFXSource.PlayOneShot(clip); 
+        if (SFXSource != null && clip != null)
+        {
+            Debug.Log("Playing SFX:" + clip.name);
+
+            SFXSource.PlayOneShot(clip);
+
+        }
+        else
+        {
+            Debug.LogWarning("SFX or Clip missing");
+        }
+
+
     }
-
-
-
 
 
 }
